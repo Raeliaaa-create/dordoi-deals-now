@@ -4,6 +4,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductDetail";
+import AISearch from "./pages/AISearch";
+import DordoiMap from "./pages/DordoiMap";
+import SellerStore from "./pages/SellerStore";
+import Favorites from "./pages/Favorites";
+import ShoppingList from "./pages/ShoppingList";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,7 +23,13 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/products" element={<Products />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/ai-search" element={<AISearch />} />
+          <Route path="/map" element={<DordoiMap />} />
+          <Route path="/seller/:name" element={<SellerStore />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/shopping-list" element={<ShoppingList />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
