@@ -1,6 +1,7 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, MapPin, Navigation } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const mapLocations = [
   { row: "A5", container: "12", sellers: ["Fashion Hub", "Tech World", "Home Essentials"] },
@@ -11,6 +12,7 @@ const mapLocations = [
 const DordoiMap = () => {
   const [searchParams] = useSearchParams();
   const location = searchParams.get("location");
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-background pb-20">
@@ -22,7 +24,7 @@ const DordoiMap = () => {
               <ArrowLeft className="h-5 w-5" />
             </Button>
           </Link>
-          <h1 className="text-xl font-bold">Dordoi Market Map</h1>
+          <h1 className="text-xl font-bold">{t('map.title')}</h1>
         </div>
       </header>
 
@@ -39,7 +41,7 @@ const DordoiMap = () => {
           </div>
         )}
 
-        <h2 className="text-lg font-bold mb-4">Market Locations</h2>
+        <h2 className="text-lg font-bold mb-4">{t('map.locations')}</h2>
         
         <div className="space-y-3">
           {mapLocations.map((loc) => (

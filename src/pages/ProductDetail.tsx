@@ -4,11 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { products } from "@/data/products";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const { toast } = useToast();
   const product = products.find(p => p.id === id);
+  const { t } = useTranslation();
 
   if (!product) {
     return <div className="p-4">Product not found</div>;
@@ -19,7 +21,7 @@ const ProductDetail = () => {
     if (!favorites.includes(product.id)) {
       favorites.push(product.id);
       localStorage.setItem("favorites", JSON.stringify(favorites));
-      toast({ title: "Added to favorites!" });
+      toast({ title: t('product.added_to_favorites') });
     }
   };
 
@@ -28,7 +30,7 @@ const ProductDetail = () => {
     if (!shoppingList.includes(product.id)) {
       shoppingList.push(product.id);
       localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
-      toast({ title: "Added to shopping list!" });
+      toast({ title: t('product.added_to_list') });
     }
   };
 
@@ -62,7 +64,7 @@ const ProductDetail = () => {
             product.badge === "New" ? "bg-badge-new" :
             "bg-badge-top"
           }`}>
-            {product.badge}
+            {t(`badges.${product.badge.toLowerCase().replace(' ', '_')}`)}
           </div>
         )}
       </div>
@@ -77,7 +79,7 @@ const ProductDetail = () => {
         {/* Sizes or Variants */}
         {product.sizes && (
           <div className="mb-6">
-            <p className="font-medium mb-2">Available Sizes:</p>
+            <p className="font-medium mb-2">{t('product.available_sizes')}:</p>
             <div className="flex flex-wrap gap-2">
               {product.sizes.map(size => (
                 <Badge key={size} variant="outline" className="px-4 py-2">
@@ -90,7 +92,7 @@ const ProductDetail = () => {
 
         {product.variants && (
           <div className="mb-6">
-            <p className="font-medium mb-2">Available Colors:</p>
+            <p className="font-medium mb-2">{t('product.available_colors')}:</p>
             <div className="flex flex-wrap gap-2">
               {product.variants.map(variant => (
                 <Badge key={variant} variant="outline" className="px-4 py-2">
@@ -103,7 +105,7 @@ const ProductDetail = () => {
 
         {/* Seller Info */}
         <div className="bg-muted rounded-xl p-4 mb-6">
-          <h3 className="font-bold mb-2">Seller Information</h3>
+          <h3 className="font-bold mb-2">{t('product.seller_info')}</h3>
           <p className="text-sm mb-1"><strong>{product.seller.name}</strong></p>
           <p className="text-sm text-muted-foreground mb-1">{product.seller.location}</p>
           <p className="text-sm text-muted-foreground">{product.seller.contact}</p>
@@ -111,7 +113,7 @@ const ProductDetail = () => {
 
         {/* Reviews */}
         <div className="mb-6">
-          <h3 className="font-bold mb-3">Customer Reviews</h3>
+          <h3 className="font-bold mb-3">{t('product.reviews')}</h3>
           {product.reviews.map((review, index) => (
             <div key={index} className="bg-muted rounded-lg p-3 mb-2">
               <div className="flex items-center gap-2 mb-1">
@@ -132,20 +134,20 @@ const ProductDetail = () => {
           <Link to={`/map?location=${encodeURIComponent(product.seller.location)}`}>
             <Button className="w-full" variant="outline">
               <MapPin className="mr-2 h-4 w-4" />
-              Show on Dordoi Map
+              {t('product.show_on_map')}
             </Button>
           </Link>
           
           <Link to={`/seller/${product.seller.name}`}>
             <Button className="w-full" variant="outline">
               <Store className="mr-2 h-4 w-4" />
-              Visit Seller Store
+              {t('product.visit_store')}
             </Button>
           </Link>
 
           <Button className="w-full" onClick={handleAddToShoppingList}>
             <Truck className="mr-2 h-4 w-4" />
-            Add to Shopping List
+            {t('product.add_to_list')}
           </Button>
         </div>
       </div>

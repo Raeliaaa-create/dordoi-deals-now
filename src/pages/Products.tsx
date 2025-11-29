@@ -3,11 +3,13 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, SlidersHorizontal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { products } from "@/data/products";
+import { useTranslation } from "react-i18next";
 
 const Products = () => {
   const [searchParams] = useSearchParams();
   const category = searchParams.get("category");
   const [filteredProducts, setFilteredProducts] = useState(products);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (category) {
@@ -28,7 +30,7 @@ const Products = () => {
             </Button>
           </Link>
           <h1 className="text-xl font-bold flex-1">
-            {category || "All Products"}
+            {category ? t(`categories.${category.toLowerCase().replace(' ', '_')}`) : t('products.all')}
           </h1>
           <Button variant="ghost" size="icon">
             <SlidersHorizontal className="h-5 w-5" />
@@ -39,7 +41,7 @@ const Products = () => {
       {/* Product Grid */}
       <div className="px-4 py-6">
         <p className="text-sm text-muted-foreground mb-4">
-          {filteredProducts.length} products found
+          {filteredProducts.length} {t('products.all_products').toLowerCase()}
         </p>
         <div className="grid grid-cols-2 gap-3">
           {filteredProducts.map((product) => (
@@ -57,7 +59,7 @@ const Products = () => {
                       product.badge === "New" ? "bg-badge-new" :
                       "bg-badge-top"
                     }`}>
-                      {product.badge}
+                      {t(`badges.${product.badge.toLowerCase().replace(' ', '_')}`)}
                     </div>
                   )}
                 </div>
