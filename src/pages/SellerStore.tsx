@@ -2,10 +2,12 @@ import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, MapPin, Phone, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { products } from "@/data/products";
+import { useTranslation } from "react-i18next";
 
 const SellerStore = () => {
   const { name } = useParams();
   const decodedName = decodeURIComponent(name || "");
+  const { t } = useTranslation();
   
   const sellerProducts = products.filter(p => p.seller.name === decodedName);
   const seller = sellerProducts[0]?.seller;
@@ -44,7 +46,7 @@ const SellerStore = () => {
             <div className="flex items-center gap-1 text-sm text-muted-foreground mb-2">
               <Star className="h-4 w-4 fill-secondary text-secondary" />
               <span className="font-medium">{avgRating}</span>
-              <span>({allReviews.length} reviews)</span>
+              <span>({allReviews.length} {t('seller.total_reviews').toLowerCase()})</span>
             </div>
           </div>
         </div>
@@ -63,14 +65,14 @@ const SellerStore = () => {
         <Link to={`/map?location=${encodeURIComponent(seller.location)}`}>
           <Button className="w-full" variant="outline">
             <MapPin className="mr-2 h-4 w-4" />
-            View on Map
+            {t('map.title')}
           </Button>
         </Link>
       </div>
 
       {/* Products */}
       <div className="p-4">
-        <h3 className="text-lg font-bold mb-4">Products ({sellerProducts.length})</h3>
+        <h3 className="text-lg font-bold mb-4">{t('seller.products')} ({sellerProducts.length})</h3>
         <div className="grid grid-cols-2 gap-3">
           {sellerProducts.map((product) => (
             <Link key={product.id} to={`/product/${product.id}`}>
@@ -87,7 +89,7 @@ const SellerStore = () => {
                       product.badge === "New" ? "bg-badge-new" :
                       "bg-badge-top"
                     }`}>
-                      {product.badge}
+                      {t(`badges.${product.badge.toLowerCase().replace(' ', '_')}`)}
                     </div>
                   )}
                 </div>
@@ -104,7 +106,7 @@ const SellerStore = () => {
       {/* Reviews */}
       {allReviews.length > 0 && (
         <div className="p-4 border-t">
-          <h3 className="text-lg font-bold mb-4">Customer Reviews</h3>
+          <h3 className="text-lg font-bold mb-4">{t('product.reviews')}</h3>
           <div className="space-y-2">
             {allReviews.map((review, index) => (
               <div key={index} className="bg-muted rounded-lg p-3">

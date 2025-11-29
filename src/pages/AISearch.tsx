@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { products } from "@/data/products";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 const AISearch = () => {
   const [isSearching, setIsSearching] = useState(false);
@@ -14,6 +15,7 @@ const AISearch = () => {
   const [searchType, setSearchType] = useState<"none" | "text" | "image">("none");
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
+  const { t } = useTranslation();
 
   const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -156,7 +158,7 @@ const AISearch = () => {
               <ArrowLeft className="h-5 w-5" />
             </Button>
           </Link>
-          <h1 className="text-xl font-bold">AI Visual Search</h1>
+          <h1 className="text-xl font-bold">{t('ai_search.title')}</h1>
         </div>
       </header>
 
@@ -167,15 +169,15 @@ const AISearch = () => {
             <div className="w-full max-w-md space-y-3">
               <div className="flex items-center gap-2 mb-2">
                 <Search className="h-5 w-5 text-primary" />
-                <h2 className="text-lg font-bold">Search by Text</h2>
+                <h2 className="text-lg font-bold">{t('ai_search.search_by_text')}</h2>
               </div>
               <p className="text-sm text-muted-foreground mb-3">
-                Describe what you're looking for (e.g., "black hoodie", "women's boots")
+                {t('ai_search.text_description')}
               </p>
               <div className="flex gap-2">
                 <Input
                   type="text"
-                  placeholder="What are you looking for?"
+                  placeholder={t('ai_search.text_placeholder')}
                   value={textQuery}
                   onChange={(e) => setTextQuery(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleTextSearch()}
@@ -190,7 +192,7 @@ const AISearch = () => {
             {/* Divider */}
             <div className="flex items-center gap-4 w-full max-w-md">
               <div className="flex-1 h-px bg-border" />
-              <span className="text-sm text-muted-foreground">OR</span>
+              <span className="text-sm text-muted-foreground">{t('ai_search.or')}</span>
               <div className="flex-1 h-px bg-border" />
             </div>
 
@@ -198,10 +200,10 @@ const AISearch = () => {
             <div className="w-full max-w-md space-y-3">
               <div className="flex items-center gap-2 mb-2">
                 <Camera className="h-5 w-5 text-primary" />
-                <h2 className="text-lg font-bold">Search by Photo</h2>
+                <h2 className="text-lg font-bold">{t('ai_search.search_by_photo')}</h2>
               </div>
               <p className="text-sm text-muted-foreground mb-3">
-                Upload a photo and we'll find similar items in Dordoi market
+                {t('ai_search.photo_description')}
               </p>
               <input
                 ref={fileInputRef}
@@ -217,7 +219,7 @@ const AISearch = () => {
                 variant="outline"
               >
                 <Upload className="mr-2 h-5 w-5" />
-                Upload Photo
+                {t('ai_search.upload_photo')}
               </Button>
             </div>
           </div>
@@ -228,10 +230,10 @@ const AISearch = () => {
             <Loader2 className="h-16 w-16 animate-spin text-primary mb-4" />
             <p className="text-lg font-medium">
               {searchType === "image" 
-                ? "Analyzing image and finding similar products..." 
-                : "AI is searching through Dordoi products..."}
+                ? t('ai_search.searching_image')
+                : t('ai_search.searching_text')}
             </p>
-            <p className="text-sm text-muted-foreground">This may take a moment</p>
+            <p className="text-sm text-muted-foreground">{t('ai_search.wait_message')}</p>
           </div>
         )}
 
@@ -239,10 +241,10 @@ const AISearch = () => {
           <div>
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-bold">
-                {searchType === "image" ? "Similar Products Found" : "Search Results"}
+                {searchType === "image" ? t('ai_search.results_found') : t('ai_search.search_results')}
               </h2>
               <span className="text-sm text-muted-foreground">
-                {searchResults.length} {searchResults.length === 1 ? 'product' : 'products'}
+                {searchResults.length} {searchResults.length === 1 ? t('ai_search.product_count') : t('ai_search.products_count')}
               </span>
             </div>
             <div className="grid grid-cols-2 gap-3">
@@ -255,15 +257,15 @@ const AISearch = () => {
                         alt={product.name}
                         className="w-full h-full object-cover"
                       />
-                      {product.badge && (
-                        <div className={`absolute top-2 left-2 px-2 py-1 rounded-full text-xs font-bold text-white ${
-                          product.badge === "Popular" ? "bg-badge-popular" :
-                          product.badge === "New" ? "bg-badge-new" :
-                          "bg-badge-top"
-                        }`}>
-                          {product.badge}
-                        </div>
-                      )}
+                    {product.badge && (
+                      <div className={`absolute top-2 left-2 px-2 py-1 rounded-full text-xs font-bold text-white ${
+                        product.badge === "Popular" ? "bg-badge-popular" :
+                        product.badge === "New" ? "bg-badge-new" :
+                        "bg-badge-top"
+                      }`}>
+                        {t(`badges.${product.badge.toLowerCase().replace(' ', '_')}`)}
+                      </div>
+                    )}
                     </div>
                     <div className="p-3">
                       <h3 className="text-sm font-medium line-clamp-2 mb-1">{product.name}</h3>
@@ -284,7 +286,7 @@ const AISearch = () => {
                   setSearchType("none");
                 }}
               >
-                New Search
+                {t('ai_search.new_search')}
               </Button>
               {searchType === "text" && (
                 <Button 
@@ -292,7 +294,7 @@ const AISearch = () => {
                   onClick={handleTextSearch}
                 >
                   <Search className="mr-2 h-4 w-4" />
-                  Refine Search
+                  {t('ai_search.refine_search')}
                 </Button>
               )}
             </div>

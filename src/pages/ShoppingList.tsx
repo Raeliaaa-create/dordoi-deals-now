@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ShoppingCart, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { products } from "@/data/products";
+import { useTranslation } from "react-i18next";
 
 const ShoppingList = () => {
   const [shoppingList, setShoppingList] = useState<string[]>([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("shoppingList") || "[]");
@@ -32,7 +34,7 @@ const ShoppingList = () => {
               <ArrowLeft className="h-5 w-5" />
             </Button>
           </Link>
-          <h1 className="text-xl font-bold">Shopping List</h1>
+          <h1 className="text-xl font-bold">{t('shopping_list.title')}</h1>
         </div>
       </header>
 
@@ -40,12 +42,12 @@ const ShoppingList = () => {
         {listProducts.length === 0 ? (
           <div className="flex flex-col items-center justify-center min-h-[60vh]">
             <ShoppingCart className="h-16 w-16 text-muted-foreground mb-4" />
-            <p className="text-lg font-medium mb-2">Your list is empty</p>
+            <p className="text-lg font-medium mb-2">{t('shopping_list.empty')}</p>
             <p className="text-sm text-muted-foreground text-center mb-6">
-              Add products you plan to buy when visiting the market
+              {t('shopping_list.empty_description')}
             </p>
             <Link to="/">
-              <Button>Browse Products</Button>
+              <Button>{t('favorites.browse_products')}</Button>
             </Link>
           </div>
         ) : (
@@ -82,14 +84,14 @@ const ShoppingList = () => {
 
             <div className="bg-card rounded-xl p-4 border-2 border-primary">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-lg font-medium">Total Estimate:</span>
+                <span className="text-lg font-medium">{t('shopping_list.total')}:</span>
                 <span className="text-2xl font-bold text-primary">{totalPrice} KGS</span>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
                 This is an estimate based on listed prices. Actual prices may vary at the market.
               </p>
               <Link to="/map">
-                <Button className="w-full">View All Locations on Map</Button>
+                <Button className="w-full">{t('map.title')}</Button>
               </Link>
             </div>
           </>

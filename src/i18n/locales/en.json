@@ -1,0 +1,113 @@
+{
+  "app": {
+    "name": "Dordoi Online",
+    "slogan": "Find everything at Dordoi Market"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "favorites": "Favorites",
+    "shopping_list": "Shopping List",
+    "ai_search": "AI Search",
+    "map": "Map"
+  },
+  "home": {
+    "search_placeholder": "Search products, categories...",
+    "upload_photo": "Upload Photo",
+    "categories": "Categories",
+    "popular_products": "Popular Products",
+    "view_all": "View All"
+  },
+  "categories": {
+    "clothing": "Clothing",
+    "shoes": "Shoes",
+    "electronics": "Electronics",
+    "kidswear": "Kidswear",
+    "home_items": "Home items",
+    "accessories": "Accessories",
+    "cosmetics": "Cosmetics",
+    "bags": "Bags"
+  },
+  "products": {
+    "all_products": "All Products",
+    "filter_by_category": "Filter by Category",
+    "all": "All",
+    "no_products": "No products found"
+  },
+  "product": {
+    "price": "Price",
+    "description": "Description",
+    "available_sizes": "Available Sizes",
+    "available_colors": "Available Colors",
+    "seller_info": "Seller Information",
+    "seller": "Seller",
+    "location": "Location",
+    "contact": "Contact",
+    "reviews": "Customer Reviews",
+    "show_on_map": "Show on Dordoi Map",
+    "visit_store": "Visit Seller Store",
+    "add_to_list": "Add to Shopping List",
+    "added_to_favorites": "Added to favorites!",
+    "added_to_list": "Added to shopping list!"
+  },
+  "badges": {
+    "popular": "Popular",
+    "new": "New",
+    "top_choice": "Top Choice"
+  },
+  "ai_search": {
+    "title": "AI Visual Search",
+    "search_by_text": "Search by Text",
+    "text_placeholder": "What are you looking for?",
+    "text_description": "Describe what you're looking for (e.g., \"black hoodie\", \"women's boots\")",
+    "search_by_photo": "Search by Photo",
+    "photo_description": "Upload a photo and we'll find similar items in Dordoi market",
+    "upload_photo": "Upload Photo",
+    "searching_image": "Analyzing image and finding similar products...",
+    "searching_text": "AI is searching through Dordoi products...",
+    "wait_message": "This may take a moment",
+    "results_found": "Similar Products Found",
+    "search_results": "Search Results",
+    "products_count": "products",
+    "product_count": "product",
+    "new_search": "New Search",
+    "refine_search": "Refine Search",
+    "or": "OR"
+  },
+  "map": {
+    "title": "Dordoi Map",
+    "search_location": "Search location or seller...",
+    "locations": "Market Locations",
+    "view_details": "View Details"
+  },
+  "seller": {
+    "store": "Seller Store",
+    "products": "Products",
+    "total_reviews": "Total Reviews",
+    "no_products": "No products from this seller"
+  },
+  "favorites": {
+    "title": "My Favorites",
+    "empty": "You haven't added any favorites yet",
+    "empty_description": "Browse products and tap the heart icon to save your favorites",
+    "browse_products": "Browse Products"
+  },
+  "shopping_list": {
+    "title": "Shopping List",
+    "empty": "Your shopping list is empty",
+    "empty_description": "Add products you want to buy before visiting Dordoi market",
+    "total": "Total Estimated",
+    "items_count": "items",
+    "item_count": "item"
+  },
+  "common": {
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "Error",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back"
+  }
+}

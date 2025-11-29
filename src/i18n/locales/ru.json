@@ -1,0 +1,113 @@
+{
+  "app": {
+    "name": "Дордой Онлайн",
+    "slogan": "Найдите всё на рынке Дордой"
+  },
+  "nav": {
+    "home": "Главная",
+    "products": "Товары",
+    "favorites": "Избранное",
+    "shopping_list": "Список покупок",
+    "ai_search": "AI Поиск",
+    "map": "Карта"
+  },
+  "home": {
+    "search_placeholder": "Поиск товаров, категорий...",
+    "upload_photo": "Загрузить фото",
+    "categories": "Категории",
+    "popular_products": "Популярные товары",
+    "view_all": "Смотреть все"
+  },
+  "categories": {
+    "clothing": "Одежда",
+    "shoes": "Обувь",
+    "electronics": "Электроника",
+    "kidswear": "Детская одежда",
+    "home_items": "Товары для дома",
+    "accessories": "Аксессуары",
+    "cosmetics": "Косметика",
+    "bags": "Сумки"
+  },
+  "products": {
+    "all_products": "Все товары",
+    "filter_by_category": "Фильтр по категории",
+    "all": "Все",
+    "no_products": "Товары не найдены"
+  },
+  "product": {
+    "price": "Цена",
+    "description": "Описание",
+    "available_sizes": "Доступные размеры",
+    "available_colors": "Доступные цвета",
+    "seller_info": "Информация о продавце",
+    "seller": "Продавец",
+    "location": "Местоположение",
+    "contact": "Контакт",
+    "reviews": "Отзывы покупателей",
+    "show_on_map": "Показать на карте Дордой",
+    "visit_store": "Посетить магазин продавца",
+    "add_to_list": "Добавить в список покупок",
+    "added_to_favorites": "Добавлено в избранное!",
+    "added_to_list": "Добавлено в список покупок!"
+  },
+  "badges": {
+    "popular": "Популярное",
+    "new": "Новинка",
+    "top_choice": "Лучший выбор"
+  },
+  "ai_search": {
+    "title": "AI Визуальный поиск",
+    "search_by_text": "Поиск по тексту",
+    "text_placeholder": "Что вы ищете?",
+    "text_description": "Опишите, что вы ищете (например, \"черная толстовка\", \"женские ботинки\")",
+    "search_by_photo": "Поиск по фото",
+    "photo_description": "Загрузите фото и мы найдём похожие товары на рынке Дордой",
+    "upload_photo": "Загрузить фото",
+    "searching_image": "Анализирую изображение и ищу похожие товары...",
+    "searching_text": "AI ищет товары на Дордое...",
+    "wait_message": "Это может занять некоторое время",
+    "results_found": "Найдены похожие товары",
+    "search_results": "Результаты поиска",
+    "products_count": "товаров",
+    "product_count": "товар",
+    "new_search": "Новый поиск",
+    "refine_search": "Уточнить поиск",
+    "or": "ИЛИ"
+  },
+  "map": {
+    "title": "Карта Дордой",
+    "search_location": "Поиск места или продавца...",
+    "locations": "Места на рынке",
+    "view_details": "Подробнее"
+  },
+  "seller": {
+    "store": "Магазин продавца",
+    "products": "Товары",
+    "total_reviews": "Всего отзывов",
+    "no_products": "Нет товаров от этого продавца"
+  },
+  "favorites": {
+    "title": "Моё избранное",
+    "empty": "Вы ещё не добавили ничего в избранное",
+    "empty_description": "Просматривайте товары и нажимайте на сердечко, чтобы сохранить в избранное",
+    "browse_products": "Смотреть товары"
+  },
+  "shopping_list": {
+    "title": "Список покупок",
+    "empty": "Ваш список покупок пуст",
+    "empty_description": "Добавьте товары, которые хотите купить перед посещением рынка Дордой",
+    "total": "Примерная сумма",
+    "items_count": "товаров",
+    "item_count": "товар"
+  },
+  "common": {
+    "search": "Поиск",
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "back": "Назад"
+  }
+}

@@ -4,9 +4,12 @@ import { Search, Camera, Heart, ShoppingCart, Shirt, Footprints, Smartphone, Bab
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { products, categories } from "@/data/products";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const { t } = useTranslation();
 
   const categoryIcons = {
     Shirt, Footprints, Smartphone, Baby, Home, Watch, Sparkles, ShoppingBag
@@ -18,8 +21,9 @@ const Index = () => {
       <header className="sticky top-0 z-50 bg-card shadow-sm border-b">
         <div className="px-4 py-3">
           <div className="flex items-center justify-between mb-3">
-            <h1 className="text-2xl font-bold text-primary">Dordoi Online</h1>
+            <h1 className="text-2xl font-bold text-primary">{t('app.name')}</h1>
             <div className="flex gap-2">
+              <LanguageSwitcher />
               <Link to="/favorites">
                 <Button variant="ghost" size="icon">
                   <Heart className="h-5 w-5" />
@@ -38,7 +42,7 @@ const Index = () => {
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
-                placeholder="Search products..."
+                placeholder={t('home.search_placeholder')}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10"
@@ -72,7 +76,7 @@ const Index = () => {
 
       {/* Categories */}
       <section className="px-4 py-6">
-        <h2 className="text-lg font-bold mb-4">Categories</h2>
+        <h2 className="text-lg font-bold mb-4">{t('home.categories')}</h2>
         <div className="grid grid-cols-4 gap-4">
           {categories.map((category, index) => {
             const Icon = categoryIcons[category.icon as keyof typeof categoryIcons];
@@ -82,7 +86,7 @@ const Index = () => {
                   <div className={`${category.color} w-16 h-16 rounded-2xl flex items-center justify-center shadow-md hover:scale-105 transition-transform`}>
                     <Icon className="h-8 w-8 text-white" />
                   </div>
-                  <span className="text-xs text-center font-medium">{category.name}</span>
+                  <span className="text-xs text-center font-medium">{t(`categories.${category.name.toLowerCase().replace(' ', '_')}`)}</span>
                 </div>
               </Link>
             );
@@ -92,7 +96,7 @@ const Index = () => {
 
       {/* Product Grid */}
       <section className="px-4 pb-6">
-        <h2 className="text-lg font-bold mb-4">Popular Products</h2>
+        <h2 className="text-lg font-bold mb-4">{t('home.popular_products')}</h2>
         <div className="grid grid-cols-2 gap-3">
           {products.slice(0, 6).map((product) => (
             <Link key={product.id} to={`/product/${product.id}`}>
@@ -103,13 +107,13 @@ const Index = () => {
                     alt={product.name}
                     className="w-full h-full object-cover"
                   />
-                  {product.badge && (
+                   {product.badge && (
                     <div className={`absolute top-2 left-2 px-2 py-1 rounded-full text-xs font-bold text-white ${
                       product.badge === "Popular" ? "bg-badge-popular" :
                       product.badge === "New" ? "bg-badge-new" :
                       "bg-badge-top"
                     }`}>
-                      {product.badge}
+                      {t(`badges.${product.badge.toLowerCase().replace(' ', '_')}`)}
                     </div>
                   )}
                 </div>
@@ -124,7 +128,7 @@ const Index = () => {
         
         <Link to="/products">
           <Button className="w-full mt-4" variant="outline">
-            View All Products
+            {t('home.view_all')}
           </Button>
         </Link>
       </section>

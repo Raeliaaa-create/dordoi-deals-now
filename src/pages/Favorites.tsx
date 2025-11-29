@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { products } from "@/data/products";
+import { useTranslation } from "react-i18next";
 
 const Favorites = () => {
   const [favorites, setFavorites] = useState<string[]>([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("favorites") || "[]");
@@ -30,7 +32,7 @@ const Favorites = () => {
               <ArrowLeft className="h-5 w-5" />
             </Button>
           </Link>
-          <h1 className="text-xl font-bold">My Favorites</h1>
+          <h1 className="text-xl font-bold">{t('favorites.title')}</h1>
         </div>
       </header>
 
@@ -38,12 +40,12 @@ const Favorites = () => {
         {favoriteProducts.length === 0 ? (
           <div className="flex flex-col items-center justify-center min-h-[60vh]">
             <Heart className="h-16 w-16 text-muted-foreground mb-4" />
-            <p className="text-lg font-medium mb-2">No favorites yet</p>
+            <p className="text-lg font-medium mb-2">{t('favorites.empty')}</p>
             <p className="text-sm text-muted-foreground text-center mb-6">
-              Start adding products you like to your favorites
+              {t('favorites.empty_description')}
             </p>
             <Link to="/">
-              <Button>Browse Products</Button>
+              <Button>{t('favorites.browse_products')}</Button>
             </Link>
           </div>
         ) : (
@@ -64,7 +66,7 @@ const Favorites = () => {
                           product.badge === "New" ? "bg-badge-new" :
                           "bg-badge-top"
                         }`}>
-                          {product.badge}
+                          {t(`badges.${product.badge.toLowerCase().replace(' ', '_')}`)}
                         </div>
                       )}
                     </div>
