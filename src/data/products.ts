@@ -23,683 +23,683 @@ export interface Product {
 export const products: Product[] = [
   {
     id: "1",
-    name: "Women's Oversized T-Shirt",
+    name: "Женская футболка оверсайз",
     price: 650,
     image: "/products/tshirt.jpg",
     category: "Clothing",
     badge: "Popular",
-    description: "Comfortable cotton oversized t-shirt, perfect for casual wear. Available in multiple colors.",
+    description: "Удобная хлопковая футболка оверсайз, идеальна для повседневной носки.",
     seller: {
       name: "Fashion Hub",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 123 456"
     },
     reviews: [
-      { author: "Aida K.", rating: 5, text: "Great quality and comfortable!" },
-      { author: "Nursultan B.", rating: 4, text: "Nice fit, good price" }
+      { author: "Аида К.", rating: 5, text: "Отличное качество!" },
+      { author: "Нурсултан Б.", rating: 4, text: "Хорошая посадка" }
     ],
     sizes: ["S", "M", "L", "XL"],
-    variants: ["White", "Black", "Gray", "Pink"]
+    variants: ["Белый", "Черный", "Серый", "Розовый"]
   },
   {
     id: "2",
-    name: "Men's Sneakers",
+    name: "Мужские кроссовки",
     price: 1800,
     image: "/products/sneakers.jpg",
     category: "Shoes",
     badge: "Top Choice",
-    description: "Stylish and comfortable sneakers for everyday wear. Durable rubber sole.",
+    description: "Стильные и удобные кроссовки для повседневной носки. Прочная резиновая подошва.",
     seller: {
       name: "Shoe Palace",
-      location: "Row B10 → Container 47",
+      location: "Ряд B10 → Контейнер 47",
       contact: "+996 555 234 567"
     },
     reviews: [
-      { author: "Bektur M.", rating: 5, text: "Very comfortable, worth the price!" },
-      { author: "Azamat S.", rating: 5, text: "Perfect for daily use" }
+      { author: "Бектур М.", rating: 5, text: "Очень удобные!" },
+      { author: "Азамат С.", rating: 5, text: "Идеальны для носки" }
     ],
     sizes: ["40", "41", "42", "43", "44"],
-    variants: ["Black/White", "Navy", "Gray"]
+    variants: ["Черный/Белый", "Темно-синий", "Серый"]
   },
   {
     id: "3",
-    name: "Kids Summer Dress",
+    name: "Летнее платье для девочек",
     price: 750,
     image: "/products/dress.jpg",
     category: "Kidswear",
     badge: "New",
-    description: "Bright and colorful summer dress for girls. Lightweight and breathable fabric.",
+    description: "Яркое летнее платье для девочек. Легкая дышащая ткань.",
     seller: {
       name: "Kids Corner",
-      location: "Row C3 → Container 88",
+      location: "Ряд C3 → Контейнер 88",
       contact: "+996 555 345 678"
     },
     reviews: [
-      { author: "Dinara T.", rating: 5, text: "My daughter loves it!" }
+      { author: "Динара Т.", rating: 5, text: "Дочке очень нравится!" }
     ],
-    sizes: ["2-3y", "4-5y", "6-7y", "8-9y"],
-    variants: ["Pink Floral", "Blue Dots", "Yellow Stars"]
+    sizes: ["2-3 года", "4-5 лет", "6-7 лет", "8-9 лет"],
+    variants: ["Розовый цветочный", "Синий в горошек", "Желтый со звездами"]
   },
   {
     id: "4",
-    name: "Power Bank 20,000 mAh",
+    name: "Power Bank 20,000 мАч",
     price: 1200,
     image: "/products/powerbank.jpg",
     category: "Electronics",
     badge: "Popular",
-    description: "High-capacity power bank with fast charging. Compatible with all devices.",
+    description: "Мощный power bank с быстрой зарядкой. Совместим со всеми устройствами.",
     seller: {
       name: "Tech World",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 456 789"
     },
     reviews: [
-      { author: "Bakyt A.", rating: 4, text: "Good battery life" },
-      { author: "Emil K.", rating: 5, text: "Charges fast, highly recommend" }
+      { author: "Бакыт А.", rating: 4, text: "Хорошая батарея" },
+      { author: "Эмиль К.", rating: 5, text: "Быстро заряжает" }
     ],
-    variants: ["Black", "White", "Blue"]
+    variants: ["Черный", "Белый", "Синий"]
   },
   {
     id: "5",
-    name: "Women's Jeans",
+    name: "Женские джинсы",
     price: 1300,
     image: "/products/jeans.jpg",
     category: "Clothing",
     badge: "Top Choice",
-    description: "Classic fit jeans with stretch fabric. Comfortable and stylish.",
+    description: "Классические джинсы с эластичной тканью. Удобные и стильные.",
     seller: {
       name: "Fashion Hub",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 123 456"
     },
     reviews: [
-      { author: "Gulnara Z.", rating: 5, text: "Perfect fit!" },
-      { author: "Aidai M.", rating: 4, text: "Good quality denim" }
+      { author: "Гульнара З.", rating: 5, text: "Идеальная посадка!" },
+      { author: "Айдай М.", rating: 4, text: "Хороший деним" }
     ],
     sizes: ["26", "28", "30", "32", "34"],
-    variants: ["Blue", "Black", "Light Wash"]
+    variants: ["Синий", "Черный", "Светлый"]
   },
   {
     id: "6",
-    name: "Hoodie Unisex",
+    name: "Толстовка унисекс",
     price: 1100,
     image: "/products/hoodie.jpg",
     category: "Clothing",
     badge: "Popular",
-    description: "Warm and cozy hoodie for cold days. Soft fleece interior.",
+    description: "Теплая толстовка для холодных дней. Мягкая флисовая подкладка.",
     seller: {
       name: "Street Style",
-      location: "Row B10 → Container 47",
+      location: "Ряд B10 → Контейнер 47",
       contact: "+996 555 567 890"
     },
     reviews: [
-      { author: "Timur I.", rating: 5, text: "Very warm and comfortable" }
+      { author: "Тимур И.", rating: 5, text: "Очень теплая!" }
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
-    variants: ["Gray", "Black", "Navy", "Burgundy"]
+    variants: ["Серый", "Черный", "Темно-синий", "Бордовый"]
   },
   {
     id: "7",
-    name: "Wireless Earbuds",
+    name: "Беспроводные наушники",
     price: 950,
     image: "/products/earbuds.jpg",
     category: "Electronics",
     badge: "New",
-    description: "Bluetooth 5.0 wireless earbuds with charging case. Great sound quality.",
+    description: "Bluetooth 5.0 наушники с кейсом для зарядки. Отличное качество звука.",
     seller: {
       name: "Tech World",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 456 789"
     },
     reviews: [
-      { author: "Aidar K.", rating: 4, text: "Good sound for the price" }
+      { author: "Айдар К.", rating: 4, text: "Хороший звук" }
     ],
-    variants: ["White", "Black"]
+    variants: ["Белый", "Черный"]
   },
   {
     id: "8",
-    name: "Women's Handbag",
+    name: "Женская сумка",
     price: 1450,
     image: "/products/handbag.jpg",
     category: "Bags",
     badge: "Top Choice",
-    description: "Elegant PU leather handbag with multiple compartments. Perfect for daily use.",
+    description: "Элегантная сумка из кожзама с несколькими отделениями. Идеальна для повседневного использования.",
     seller: {
       name: "Accessory Shop",
-      location: "Row C3 → Container 88",
+      location: "Ряд C3 → Контейнер 88",
       contact: "+996 555 678 901"
     },
     reviews: [
-      { author: "Jyldyz A.", rating: 5, text: "Beautiful bag, lots of space!" },
-      { author: "Cholpon B.", rating: 5, text: "Looks expensive, great quality" }
+      { author: "Жылдыз А.", rating: 5, text: "Красивая сумка!" },
+      { author: "Чолпон Б.", rating: 5, text: "Отличное качество" }
     ],
-    variants: ["Black", "Brown", "Beige", "Red"]
+    variants: ["Черный", "Коричневый", "Бежевый", "Красный"]
   },
   {
     id: "9",
-    name: "Kids School Backpack",
+    name: "Детский школьный рюкзак",
     price: 850,
     image: "/products/backpack.jpg",
     category: "Kidswear",
     badge: "Popular",
-    description: "Durable school backpack with multiple pockets. Water-resistant material.",
+    description: "Прочный школьный рюкзак с несколькими карманами. Водостойкий материал.",
     seller: {
       name: "Kids Corner",
-      location: "Row C3 → Container 88",
+      location: "Ряд C3 → Контейнер 88",
       contact: "+996 555 345 678"
     },
     reviews: [
-      { author: "Murat S.", rating: 5, text: "Perfect size for school books" }
+      { author: "Мурат С.", rating: 5, text: "Идеальный размер!" }
     ],
-    variants: ["Blue", "Pink", "Green", "Purple"]
+    variants: ["Синий", "Розовый", "Зеленый", "Фиолетовый"]
   },
   {
     id: "10",
-    name: "Men's Leather Belt",
+    name: "Мужской кожаный ремень",
     price: 680,
     image: "/products/belt.jpg",
     category: "Accessories",
     badge: "New",
-    description: "Genuine leather belt with metal buckle. Classic design.",
+    description: "Натуральная кожа с металлической пряжкой. Классический дизайн.",
     seller: {
       name: "Accessory Shop",
-      location: "Row C3 → Container 88",
+      location: "Ряд C3 → Контейнер 88",
       contact: "+996 555 678 901"
     },
     reviews: [
-      { author: "Ruslan T.", rating: 4, text: "Good quality leather" }
+      { author: "Руслан Т.", rating: 4, text: "Хорошая кожа" }
     ],
-    sizes: ["90cm", "95cm", "100cm", "105cm"],
-    variants: ["Black", "Brown"]
+    sizes: ["90см", "95см", "100см", "105см"],
+    variants: ["Черный", "Коричневый"]
   },
   {
     id: "11",
-    name: "Makeup Palette",
+    name: "Палетка для макияжа",
     price: 1650,
     image: "/products/makeup.jpg",
     category: "Cosmetics",
     badge: "Popular",
-    description: "Professional makeup palette with 24 colors. Long-lasting and pigmented.",
+    description: "Профессиональная палетка с 24 цветами. Стойкие и пигментированные.",
     seller: {
       name: "Beauty Haven",
-      location: "Row B10 → Container 47",
+      location: "Ряд B10 → Контейнер 47",
       contact: "+996 555 789 012"
     },
     reviews: [
-      { author: "Asel K.", rating: 5, text: "Amazing colors and quality!" },
-      { author: "Nazira D.", rating: 5, text: "Best palette I've bought" }
+      { author: "Асель К.", rating: 5, text: "Потрясающие цвета!" },
+      { author: "Назира Д.", rating: 5, text: "Лучшая палетка" }
     ]
   },
   {
     id: "12",
-    name: "Kitchen Utensil Set",
+    name: "Набор кухонных принадлежностей",
     price: 890,
     image: "/products/kitchen.jpg",
     category: "Home items",
     badge: "Top Choice",
-    description: "Complete kitchen utensil set with wooden handles. Heat-resistant.",
+    description: "Полный набор кухонных принадлежностей с деревянными ручками. Термостойкие.",
     seller: {
       name: "Home Essentials",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 890 123"
     },
     reviews: [
-      { author: "Kanykei M.", rating: 5, text: "Great set for the price!" }
+      { author: "Каныкей М.", rating: 5, text: "Отличный набор!" }
     ]
   },
   {
     id: "13",
-    name: "Xiaomi Redmi Buds 4",
+    name: "Беспроводные наушники TWS",
     price: 2490,
     image: "/products/earbuds-wireless.jpg",
     category: "Electronics",
     badge: "Popular",
-    description: "Wireless noise-cancelling earbuds with long battery life. Premium sound quality.",
+    description: "Беспроводные наушники с шумоподавлением и долгим временем работы.",
     seller: {
       name: "Tech World",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 456 789"
     },
     reviews: [
-      { author: "Erlan B.", rating: 5, text: "Excellent sound quality!" },
-      { author: "Kamila S.", rating: 4, text: "Great noise cancellation" }
+      { author: "Эрлан Б.", rating: 5, text: "Отличное качество звука!" },
+      { author: "Камила С.", rating: 4, text: "Хорошее шумоподавление" }
     ],
-    variants: ["Black", "White"]
+    variants: ["Черный", "Белый"]
   },
   {
     id: "14",
-    name: "Women's Oversized Hoodie",
+    name: "Женская толстовка оверсайз",
     price: 1350,
     image: "/products/hoodie-women.jpg",
     category: "Clothing",
     badge: "Top Choice",
-    description: "Soft cotton hoodie, perfect for casual wear. Comfortable oversized fit.",
+    description: "Мягкая хлопковая толстовка, идеальна для повседневной носки.",
     seller: {
       name: "Fashion Hub",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 123 456"
     },
     reviews: [
-      { author: "Aigul M.", rating: 5, text: "So comfortable and stylish!" },
-      { author: "Nurgul K.", rating: 5, text: "Love the oversized fit" }
+      { author: "Айгуль М.", rating: 5, text: "Очень удобная и стильная!" },
+      { author: "Нургуль К.", rating: 5, text: "Люблю свободный крой" }
     ],
     sizes: ["S", "M", "L", "XL"],
-    variants: ["Pink", "Gray", "Beige", "Black"]
+    variants: ["Розовый", "Серый", "Бежевый", "Черный"]
   },
   {
     id: "15",
-    name: "Plush Teddy Bear 40cm",
+    name: "Плюшевый медведь 40см",
     price: 890,
     image: "/products/teddy-bear.jpg",
     category: "Kidswear",
     badge: "New",
-    description: "Soft stuffed toy suitable for children. High-quality plush material.",
+    description: "Мягкая игрушка для детей. Высококачественный плюшевый материал.",
     seller: {
       name: "Kids Corner",
-      location: "Row C3 → Container 88",
+      location: "Ряд C3 → Контейнер 88",
       contact: "+996 555 345 678"
     },
     reviews: [
-      { author: "Madina A.", rating: 5, text: "My kids love it!" },
-      { author: "Askar T.", rating: 5, text: "Very soft and cute" }
+      { author: "Мадина А.", rating: 5, text: "Дети в восторге!" },
+      { author: "Аскар Т.", rating: 5, text: "Очень мягкий и милый" }
     ],
-    variants: ["Brown", "White", "Pink"]
+    variants: ["Коричневый", "Белый", "Розовый"]
   },
   {
     id: "16",
-    name: "Portable Mini Blender",
+    name: "Портативный мини-блендер",
     price: 1900,
     image: "/products/blender-portable.jpg",
     category: "Home items",
     badge: "Popular",
-    description: "USB rechargeable blender for smoothies. Perfect for travel and office.",
+    description: "USB-блендер для смузи. Идеален для путешествий и офиса.",
     seller: {
       name: "Home Essentials",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 890 123"
     },
     reviews: [
-      { author: "Zarina K.", rating: 4, text: "Convenient for smoothies" },
-      { author: "Daniyar S.", rating: 5, text: "Great for gym trips" }
+      { author: "Зарина К.", rating: 4, text: "Удобно для смузи" },
+      { author: "Данияр С.", rating: 5, text: "Отлично для спортзала" }
     ],
-    variants: ["Pink", "Blue", "White"]
+    variants: ["Розовый", "Синий", "Белый"]
   },
   {
     id: "17",
-    name: "Korean Skincare Set",
+    name: "Корейский набор для ухода",
     price: 2750,
     image: "/products/skincare.jpg",
     category: "Cosmetics",
     badge: "Top Choice",
-    description: "Moisturizer + toner bundle for daily care. Korean beauty essentials.",
+    description: "Увлажняющий крем и тоник для ежедневного ухода. Корейская косметика.",
     seller: {
       name: "Beauty Haven",
-      location: "Row B10 → Container 47",
+      location: "Ряд B10 → Контейнер 47",
       contact: "+996 555 789 012"
     },
     reviews: [
-      { author: "Aida N.", rating: 5, text: "My skin feels amazing!" },
-      { author: "Bermet A.", rating: 5, text: "Best skincare routine" }
+      { author: "Аида Н.", rating: 5, text: "Кожа выглядит потрясающе!" },
+      { author: "Бермет А.", rating: 5, text: "Лучший уход за кожей" }
     ]
   },
   {
     id: "18",
-    name: "Men's Casual Jacket",
+    name: "Мужская куртка casual",
     price: 2200,
     image: "/products/jacket-men.jpg",
     category: "Clothing",
     badge: "New",
-    description: "Stylish casual jacket perfect for spring and autumn. Water-resistant material.",
+    description: "Стильная куртка для весны и осени. Водонепроницаемый материал.",
     seller: {
       name: "Fashion Hub",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 123 456"
     },
     reviews: [
-      { author: "Ulan M.", rating: 5, text: "Perfect fit and style!" },
-      { author: "Azamat K.", rating: 4, text: "Good quality jacket" }
+      { author: "Улан М.", rating: 5, text: "Отличная посадка и стиль!" },
+      { author: "Азамат К.", rating: 4, text: "Хорошее качество" }
     ],
     sizes: ["M", "L", "XL", "XXL"],
-    variants: ["Navy", "Black", "Khaki"]
+    variants: ["Темно-синий", "Черный", "Хаки"]
   },
   {
     id: "19",
-    name: "Wireless Keyboard & Mouse Combo",
+    name: "Беспроводная клавиатура и мышь",
     price: 1650,
     image: "/products/keyboard-mouse.jpg",
     category: "Electronics",
     badge: "Popular",
-    description: "Ergonomic wireless keyboard and mouse set. Long battery life.",
+    description: "Эргономичная беспроводная клавиатура и мышь. Долгое время работы батареи.",
     seller: {
       name: "Tech World",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 456 789"
     },
     reviews: [
-      { author: "Maksat B.", rating: 5, text: "Great for office work" },
-      { author: "Nurlan T.", rating: 4, text: "Comfortable typing experience" }
+      { author: "Максат Б.", rating: 5, text: "Отлично для офиса" },
+      { author: "Нурлан Т.", rating: 4, text: "Удобно печатать" }
     ],
-    variants: ["Black", "White"]
+    variants: ["Черный", "Белый"]
   },
   {
     id: "20",
-    name: "Women's Running Shoes",
+    name: "Женские кроссовки для бега",
     price: 2100,
     image: "/products/running-shoes.jpg",
     category: "Shoes",
     badge: "Top Choice",
-    description: "Lightweight running shoes with excellent cushioning. Perfect for sports.",
+    description: "Легкие беговые кроссовки с отличной амортизацией. Идеальны для спорта.",
     seller: {
       name: "Shoe Palace",
-      location: "Row B10 → Container 47",
+      location: "Ряд B10 → Контейнер 47",
       contact: "+996 555 234 567"
     },
     reviews: [
-      { author: "Gulnara A.", rating: 5, text: "Very comfortable for running!" },
-      { author: "Ainura S.", rating: 5, text: "Great support and cushioning" }
+      { author: "Гульнара А.", rating: 5, text: "Очень удобны для бега!" },
+      { author: "Айнура С.", rating: 5, text: "Отличная поддержка" }
     ],
     sizes: ["36", "37", "38", "39", "40"],
-    variants: ["Pink/White", "Blue/Gray", "Black/Red"]
+    variants: ["Розовый/Белый", "Синий/Серый", "Черный/Красный"]
   },
   {
     id: "21",
-    name: "Smart Watch Fitness Tracker",
+    name: "Смарт-часы фитнес-трекер",
     price: 3200,
     image: "/products/smartwatch.jpg",
     category: "Electronics",
     badge: "New",
-    description: "Smart watch with heart rate monitor, sleep tracking, and notifications.",
+    description: "Умные часы с пульсометром, трекером сна и уведомлениями.",
     seller: {
       name: "Tech World",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 456 789"
     },
     reviews: [
-      { author: "Timur K.", rating: 5, text: "Excellent features for the price!" },
-      { author: "Aibek M.", rating: 4, text: "Good fitness tracking" }
+      { author: "Тимур К.", rating: 5, text: "Отличные функции!" },
+      { author: "Айбек М.", rating: 4, text: "Хороший фитнес-трекер" }
     ],
-    variants: ["Black", "Silver", "Rose Gold"]
+    variants: ["Черный", "Серебристый", "Розовое золото"]
   },
   {
     id: "22",
-    name: "Premium Headphones",
+    name: "Премиум наушники",
     price: 2800,
     image: "/products/headphones.jpg",
     category: "Electronics",
     badge: "Popular",
-    description: "Over-ear headphones with active noise cancellation. Studio-quality sound.",
+    description: "Полноразмерные наушники с активным шумоподавлением. Студийное качество звука.",
     seller: {
       name: "Tech World",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 456 789"
     },
     reviews: [
-      { author: "Eldiyar S.", rating: 5, text: "Amazing sound quality!" },
-      { author: "Alibek T.", rating: 5, text: "Best headphones I've owned" }
+      { author: "Эльдияр С.", rating: 5, text: "Потрясающий звук!" },
+      { author: "Алибек Т.", rating: 5, text: "Лучшие наушники" }
     ],
-    variants: ["Black", "Silver"]
+    variants: ["Черный", "Серебристый"]
   },
   {
     id: "23",
-    name: "Classic Wrist Watch",
+    name: "Классические наручные часы",
     price: 1950,
     image: "/products/watch-classic.jpg",
     category: "Accessories",
     badge: "Top Choice",
-    description: "Elegant classic watch with leather strap. Perfect for formal occasions.",
+    description: "Элегантные классические часы с кожаным ремешком. Идеальны для торжеств.",
     seller: {
       name: "Accessory Shop",
-      location: "Row C3 → Container 88",
+      location: "Ряд C3 → Контейнер 88",
       contact: "+996 555 678 901"
     },
     reviews: [
-      { author: "Bektur A.", rating: 5, text: "Looks very elegant!" },
-      { author: "Dastan K.", rating: 4, text: "Good quality watch" }
+      { author: "Бектур А.", rating: 5, text: "Выглядят элегантно!" },
+      { author: "Дастан К.", rating: 4, text: "Хорошие часы" }
     ],
-    variants: ["Brown Leather", "Black Leather"]
+    variants: ["Коричневая кожа", "Черная кожа"]
   },
   {
     id: "24",
-    name: "Designer Perfume 100ml",
+    name: "Дизайнерские духи 100мл",
     price: 3500,
     image: "/products/perfume.jpg",
     category: "Cosmetics",
     badge: "New",
-    description: "Luxury perfume with long-lasting fragrance. Premium quality.",
+    description: "Роскошный парфюм с долгоиграющим ароматом. Премиум качество.",
     seller: {
       name: "Beauty Haven",
-      location: "Row B10 → Container 47",
+      location: "Ряд B10 → Контейнер 47",
       contact: "+996 555 789 012"
     },
     reviews: [
-      { author: "Asel M.", rating: 5, text: "Smells amazing all day!" },
-      { author: "Cholpon S.", rating: 5, text: "My favorite perfume now" }
+      { author: "Асель М.", rating: 5, text: "Потрясающий аромат!" },
+      { author: "Чолпон С.", rating: 5, text: "Теперь мой любимый" }
     ]
   },
   {
     id: "25",
-    name: "Aviator Sunglasses",
+    name: "Солнцезащитные очки авиаторы",
     price: 890,
     image: "/products/sunglasses.jpg",
     category: "Accessories",
     badge: "Popular",
-    description: "Classic aviator sunglasses with UV protection. Stylish and functional.",
+    description: "Классические очки-авиаторы с UV-защитой. Стильные и функциональные.",
     seller: {
       name: "Accessory Shop",
-      location: "Row C3 → Container 88",
+      location: "Ряд C3 → Контейнер 88",
       contact: "+996 555 678 901"
     },
     reviews: [
-      { author: "Emil B.", rating: 5, text: "Great style and quality!" },
-      { author: "Ruslan M.", rating: 4, text: "Perfect for summer" }
+      { author: "Эмиль Б.", rating: 5, text: "Отличный стиль!" },
+      { author: "Руслан М.", rating: 4, text: "Идеальны для лета" }
     ],
-    variants: ["Gold/Brown", "Silver/Gray", "Black"]
+    variants: ["Золотой/Коричневый", "Серебро/Серый", "Черный"]
   },
   {
     id: "26",
-    name: "Leather Wallet",
+    name: "Кожаный кошелек",
     price: 750,
     image: "/products/wallet.jpg",
     category: "Accessories",
     badge: "Top Choice",
-    description: "Genuine leather wallet with multiple card slots. Slim design.",
+    description: "Натуральная кожа с множеством отделений. Тонкий дизайн.",
     seller: {
       name: "Accessory Shop",
-      location: "Row C3 → Container 88",
+      location: "Ряд C3 → Контейнер 88",
       contact: "+996 555 678 901"
     },
     reviews: [
-      { author: "Azamat T.", rating: 5, text: "Perfect size and quality!" },
-      { author: "Nurlan K.", rating: 5, text: "Fits perfectly in pocket" }
+      { author: "Азамат Т.", rating: 5, text: "Идеальный размер!" },
+      { author: "Нурлан К.", rating: 5, text: "Удобно в кармане" }
     ],
-    variants: ["Black", "Brown", "Navy"]
+    variants: ["Черный", "Коричневый", "Темно-синий"]
   },
   {
     id: "27",
-    name: "Digital Camera 4K",
+    name: "Цифровая камера 4K",
     price: 8900,
     image: "/products/camera.jpg",
     category: "Electronics",
     badge: "New",
-    description: "Professional 4K digital camera with multiple lenses. Perfect for photography.",
+    description: "Профессиональная 4K камера с несколькими объективами. Идеальна для фотографии.",
     seller: {
       name: "Tech World",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 456 789"
     },
     reviews: [
-      { author: "Kubat S.", rating: 5, text: "Amazing photo quality!" },
-      { author: "Anvar M.", rating: 5, text: "Great for professional work" }
+      { author: "Кубат С.", rating: 5, text: "Отличное качество фото!" },
+      { author: "Анвар М.", rating: 5, text: "Отлично для работы" }
     ]
   },
   {
     id: "28",
-    name: "Sport Sunglasses",
+    name: "Спортивные солнцезащитные очки",
     price: 1100,
     image: "/products/sunglasses-aviator.jpg",
     category: "Accessories",
     badge: "Popular",
-    description: "Polarized sport sunglasses for outdoor activities. UV400 protection.",
+    description: "Поляризованные спортивные очки для активного отдыха. Защита UV400.",
     seller: {
       name: "Accessory Shop",
-      location: "Row C3 → Container 88",
+      location: "Ряд C3 → Контейнер 88",
       contact: "+996 555 678 901"
     },
     reviews: [
-      { author: "Daniyar A.", rating: 5, text: "Perfect for cycling!" },
-      { author: "Bakyt S.", rating: 4, text: "Good quality lenses" }
+      { author: "Данияр А.", rating: 5, text: "Отлично для велоспорта!" },
+      { author: "Бакыт С.", rating: 4, text: "Хорошие линзы" }
     ],
-    variants: ["Red", "Blue", "Black"]
+    variants: ["Красный", "Синий", "Черный"]
   },
   {
     id: "29",
-    name: "Matte Lipstick Set",
+    name: "Набор матовых помад",
     price: 1450,
     image: "/products/lipstick.jpg",
     category: "Cosmetics",
     badge: "Top Choice",
-    description: "Long-lasting matte lipstick set with 6 popular shades. Moisturizing formula.",
+    description: "Стойкая матовая помада с 6 популярными оттенками. Увлажняющая формула.",
     seller: {
       name: "Beauty Haven",
-      location: "Row B10 → Container 47",
+      location: "Ряд B10 → Контейнер 47",
       contact: "+996 555 789 012"
     },
     reviews: [
-      { author: "Nazgul K.", rating: 5, text: "Beautiful colors!" },
-      { author: "Jyldyz M.", rating: 5, text: "Stays on all day" }
+      { author: "Назгуль К.", rating: 5, text: "Красивые цвета!" },
+      { author: "Жылдыз М.", rating: 5, text: "Держится весь день" }
     ]
   },
   {
     id: "30",
-    name: "Women's Ankle Boots",
+    name: "Женские ботильоны",
     price: 2900,
     image: "/products/boots-women.jpg",
     category: "Shoes",
     badge: "New",
-    description: "Stylish ankle boots with comfortable heel. Perfect for autumn and winter.",
+    description: "Стильные ботильоны на удобном каблуке. Идеальны для осени и зимы.",
     seller: {
       name: "Shoe Palace",
-      location: "Row B10 → Container 47",
+      location: "Ряд B10 → Контейнер 47",
       contact: "+996 555 234 567"
     },
     reviews: [
-      { author: "Dinara A.", rating: 5, text: "Very comfortable and stylish!" },
-      { author: "Aigul S.", rating: 5, text: "Perfect for cold weather" }
+      { author: "Динара А.", rating: 5, text: "Очень удобные!" },
+      { author: "Айгуль С.", rating: 5, text: "Отлично для холодов" }
     ],
     sizes: ["36", "37", "38", "39", "40"],
-    variants: ["Black", "Brown", "Burgundy"]
+    variants: ["Черный", "Коричневый", "Бордовый"]
   },
   {
     id: "31",
-    name: "LED Desk Lamp",
+    name: "LED настольная лампа",
     price: 1250,
     image: "/products/lamp-desk.jpg",
     category: "Home items",
     badge: "Popular",
-    description: "Adjustable LED desk lamp with multiple brightness levels. Eye-friendly.",
+    description: "Регулируемая LED лампа с уровнями яркости. Безопасна для глаз.",
     seller: {
       name: "Home Essentials",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 890 123"
     },
     reviews: [
-      { author: "Erkin M.", rating: 5, text: "Perfect for studying!" },
-      { author: "Aidar K.", rating: 4, text: "Good light quality" }
+      { author: "Эркин М.", rating: 5, text: "Отлично для учёбы!" },
+      { author: "Айдар К.", rating: 4, text: "Хороший свет" }
     ],
-    variants: ["White", "Black"]
+    variants: ["Белый", "Черный"]
   },
   {
     id: "32",
-    name: "Silicone Phone Case",
+    name: "Силиконовый чехол для телефона",
     price: 350,
     image: "/products/phone-case.jpg",
     category: "Accessories",
     badge: "Top Choice",
-    description: "Soft silicone phone case with shock protection. Fits most models.",
+    description: "Мягкий силиконовый чехол с защитой от ударов. Подходит для многих моделей.",
     seller: {
       name: "Tech World",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 456 789"
     },
     reviews: [
-      { author: "Kamila B.", rating: 5, text: "Perfect fit and protection!" },
-      { author: "Bermet T.", rating: 4, text: "Good quality case" }
+      { author: "Камила Б.", rating: 5, text: "Отличная посадка!" },
+      { author: "Бермет Т.", rating: 4, text: "Хорошее качество" }
     ],
-    variants: ["Clear", "Black", "Pink", "Blue"]
+    variants: ["Прозрачный", "Черный", "Розовый", "Синий"]
   },
   {
     id: "33",
-    name: "Leather Backpack",
+    name: "Кожаный рюкзак",
     price: 3800,
     image: "/products/backpack-leather.jpg",
     category: "Bags",
     badge: "New",
-    description: "Premium leather backpack with laptop compartment. Professional and stylish.",
+    description: "Премиум кожаный рюкзак с отделением для ноутбука. Профессиональный и стильный.",
     seller: {
       name: "Accessory Shop",
-      location: "Row C3 → Container 88",
+      location: "Ряд C3 → Контейнер 88",
       contact: "+996 555 678 901"
     },
     reviews: [
-      { author: "Ulan S.", rating: 5, text: "Excellent quality leather!" },
-      { author: "Bektur M.", rating: 5, text: "Perfect for work" }
+      { author: "Улан С.", rating: 5, text: "Отличная кожа!" },
+      { author: "Бектур М.", rating: 5, text: "Идеален для работы" }
     ],
-    variants: ["Brown", "Black"]
+    variants: ["Коричневый", "Черный"]
   },
   {
     id: "34",
-    name: "Silver Ring Set",
+    name: "Набор серебряных колец",
     price: 1650,
     image: "/products/ring.jpg",
     category: "Accessories",
     badge: "Popular",
-    description: "Set of 3 silver rings with elegant design. Perfect gift.",
+    description: "Набор из 3 серебряных колец элегантного дизайна. Отличный подарок.",
     seller: {
       name: "Accessory Shop",
-      location: "Row C3 → Container 88",
+      location: "Ряд C3 → Контейнер 88",
       contact: "+996 555 678 901"
     },
     reviews: [
-      { author: "Asel A.", rating: 5, text: "Beautiful and elegant!" },
-      { author: "Kanykei K.", rating: 5, text: "Great quality silver" }
+      { author: "Асель А.", rating: 5, text: "Красивые и элегантные!" },
+      { author: "Каныкей К.", rating: 5, text: "Хорошее серебро" }
     ],
     sizes: ["16", "17", "18", "19"]
   },
   {
     id: "35",
-    name: "Automatic Coffee Maker",
+    name: "Автоматическая кофеварка",
     price: 4500,
     image: "/products/coffee-maker.jpg",
     category: "Home items",
     badge: "Top Choice",
-    description: "Programmable coffee maker with timer. Makes perfect coffee every time.",
+    description: "Программируемая кофеварка с таймером. Идеальный кофе каждый раз.",
     seller: {
       name: "Home Essentials",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 890 123"
     },
     reviews: [
-      { author: "Manas B.", rating: 5, text: "Best coffee maker!" },
-      { author: "Nursultan A.", rating: 5, text: "Easy to use and clean" }
+      { author: "Манас Б.", rating: 5, text: "Лучшая кофеварка!" },
+      { author: "Нурсултан А.", rating: 5, text: "Легко использовать" }
     ],
-    variants: ["Black", "Silver"]
+    variants: ["Черный", "Серебристый"]
   },
   {
     id: "36",
-    name: "Decorative Plant Set",
+    name: "Набор декоративных растений",
     price: 980,
     image: "/products/plants.jpg",
     category: "Home items",
     badge: "New",
-    description: "Set of 3 decorative plants with ceramic pots. Perfect for home decor.",
+    description: "Набор из 3 декоративных растений с керамическими горшками. Идеален для интерьера.",
     seller: {
       name: "Home Essentials",
-      location: "Row A5 → Container 12",
+      location: "Ряд A5 → Контейнер 12",
       contact: "+996 555 890 123"
     },
     reviews: [
-      { author: "Cholpon M.", rating: 5, text: "Beautiful plants!" },
-      { author: "Aida T.", rating: 4, text: "Great for decoration" }
+      { author: "Чолпон М.", rating: 5, text: "Красивые растения!" },
+      { author: "Аида Т.", rating: 4, text: "Отлично для декора" }
     ]
   }
 ];
