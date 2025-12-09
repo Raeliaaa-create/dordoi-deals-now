@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, SlidersHorizontal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { products } from "@/data/products";
+import ProductCard from "@/components/ProductCard";
 import { useTranslation } from "react-i18next";
 
 const Products = () => {
@@ -45,30 +46,7 @@ const Products = () => {
         </p>
         <div className="grid grid-cols-2 gap-3">
           {filteredProducts.map((product) => (
-            <Link key={product.id} to={`/product/${product.id}`}>
-              <div className="bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div className="relative aspect-square">
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-full h-full object-cover"
-                  />
-                  {product.badge && (
-                    <div className={`absolute top-2 left-2 px-2 py-1 rounded-full text-xs font-bold text-white ${
-                      product.badge === "Popular" ? "bg-badge-popular" :
-                      product.badge === "New" ? "bg-badge-new" :
-                      "bg-badge-top"
-                    }`}>
-                      {t(`badges.${product.badge.toLowerCase().replace(' ', '_')}`)}
-                    </div>
-                  )}
-                </div>
-                <div className="p-3">
-                  <h3 className="text-sm font-medium line-clamp-2 mb-1">{product.name}</h3>
-                  <p className="text-lg font-bold text-primary">{product.price} KGS</p>
-                </div>
-              </div>
-            </Link>
+            <ProductCard key={product.id} product={product} size="medium" />
           ))}
         </div>
       </div>
